@@ -320,7 +320,7 @@ def main():
 
     # Restarting option
     restart = input("\n * Would you like to restart? Enter yes or no.\n")
-    if restart.upper() == 'YES' or restart.upper() == "Y":
+    if restart.lower() == 'yes' or restart.upper() == "y":
         main()
 
 if __name__ == '__main__':
