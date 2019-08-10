@@ -2,7 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
-# loading files
+# load files
 CITY_DATA = {
     'chicago':'chicago.csv',
     'new york city':'new_york_city.csv',
@@ -318,7 +318,7 @@ def main():
     for x in stats_funcs_list:  # displays processing time for each function block
         process(x, df)
 
-    # Restarting option
+    # Restart
     restart = input("\n * Would you like to restart? Enter yes or no.\n")
     if restart.lower() == 'yes' or restart.upper() == "y":
         main()
