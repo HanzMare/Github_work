@@ -23,22 +23,22 @@ def city_input():
     print('3.Washington')
     print(' ')
     city = input('Please choose the city for which you would like to see the Statistics: ')
-    city = city.lower()
+    city = city.upper()
     while True:     # for handling the unexpected input by user
-            if city == 'chicago':
+            if city == 'Chicago':
                 print("\nChicago City! Okay Let's go further\n")
-                return 'chicago'
-            if city == 'new york':
+                return 'Chicago'
+            if city == 'New York':
                 print("\nNew York City! Okay let's go further\n")
-                return 'new york city'
-            elif city == 'washington':
+                return 'New York city'
+            elif city == 'Washington':
                 print("\nWashington! Okay let's go further\n")
-                return 'washington'
+                return 'Washington'
             # error handled by implementing 'else' and provided another option to input data
             else:
                 print('\nPlease enter  the names of the cities\n')
                 city = input('Please choose the city for which you would like to see the Statistics: ')
-                city = city.lower()
+                city = city.upper()
     return city
 
 def get_time():
