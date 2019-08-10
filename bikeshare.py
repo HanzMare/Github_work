@@ -70,9 +70,9 @@ def get_time():
 
 def month_info(m):      # get user input for month (all, january, february, ... , june)
     if m == 'month':
-        month = input('\nChoose month! January, February, March, April, May, or June? Please type the full month name.\n')
-        while month.strip().lower() not in ['january', 'february', 'march', 'april', 'may', 'june']:
-            month = input('\nPlease choose between January, February, March, April, May, or June? Please type the full month name.\n')
+        month = input('\nChoose month! Jan, Feb, Mar, Apr, May, or Jun? Please type the full month name.\n')
+        while month.strip().lower() not in ['jan', 'feb', 'mar', 'apr', 'may', 'jun']:
+            month = input('\nPlease choose between Jan, Feb, Mar, Apr, May, or Jun? Please type the full month name.\n')
         return month.strip().lower()
     else:
         return 'none'
@@ -137,7 +137,7 @@ def time_filters(df, time, month, week_day, md):
     print('Data loaded. Now computing statistics... \n')
     #Filter by Month
     if time == 'month':
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun']
         month = months.index(month) + 1
         df = df[df['month'] == month]
 
@@ -152,7 +152,7 @@ def time_filters(df, time, month, week_day, md):
         df = df[df['day_of_week'] == day_of_week]
 
     if time == "day_of_month":
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
+        months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun']
         month = md[0]
         month = months.index(month) + 1
         df = df[df['month']==month]
@@ -164,7 +164,7 @@ def time_filters(df, time, month, week_day, md):
 def max_day_month(df, month):
     '''Gets the max day of the month '''
 
-    months = {"january": 1, "february": 2, "march": 3, "april":4, "may": 5, "june":6}
+    months = {"jan": 1, "feb": 2, "mar": 3, "apr":4, "may": 5, "jun":6}
     df = df[df["month"] == months[month]]
     max_day = max(df["day_of_month"])
     return max_day
@@ -175,7 +175,7 @@ def month_freq(df):
     # df - dataframe returned from time_filters
     print('\n * Q1. What is the most popular month for bike traveling?')
     m = df.month.mode()[0]
-    months = ['january', 'february', 'march', 'april', 'may', 'june']
+    months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun']
     popular_month = months[m - 1].capitalize()
     return popular_month
 
@@ -208,10 +208,10 @@ def ride_duration(df):
     total_ride_time = np.sum(df['Travel Time'])
     total_days = str(total_ride_time).split()[0]
 
-    print ("\nThe total travel time on 2017 through June was " + total_days + " days \n")
+    print ("\nThe total travel time on 2017 through Jun was " + total_days + " days \n")
     avg_ride_time = np.mean(df['Travel Time'])
     avg_days = str(avg_ride_time).split()[0]
-    print("The average travel time on 2017 through June was " + avg_days + " days \n")
+    print("The average travel time on 2017 through Jun was " + avg_days + " days \n")
 
     return total_ride_time, avg_ride_time
 
