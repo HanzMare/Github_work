@@ -43,6 +43,7 @@ Pandas and numpy functions:
         http://scipy-lectures.org/intro/numpy/operations.html#sorting-data
         http://scipy-lectures.org/intro/numpy/array_object.html#basic-data-types
         http://scipy-lectures.org/intro/numpy/array_object.html#creating-arrays
+        https://www.numpy.org/doc/1.15/user/basics.types.html
 Docstring Conventions:
 •       https://www.python.org/dev/peps/pep-0257/
 
