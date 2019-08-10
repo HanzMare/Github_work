@@ -47,3 +47,5 @@ Pandas and numpy functions:
 Docstring Conventions:
 •       https://www.python.org/dev/peps/pep-0257/
 
+Conclusion:
+The code worked as expected. 
